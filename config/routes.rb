@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users, :skip => [:registrations], controllers: {
+    sessions: 'devise/sessions'
+  }
+  
+  resources 'dashboards', only: [:index]
+  root 'dashboards#index'
 end
