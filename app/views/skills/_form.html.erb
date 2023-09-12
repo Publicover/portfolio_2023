@@ -1,0 +1,18 @@
+<%= form_with(model: @skill) do |form| %>
+  <div class='container'>
+    <%= render 'partials/form_errors', object: @skill %>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.label :name, class: 'form-label' %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.submit class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>

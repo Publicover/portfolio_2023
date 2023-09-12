@@ -21,12 +21,34 @@ html {
   padding-right: 0px !important;
 }
 
-.navbar-brand {
+// .navbar-brand {
+//   margin-top: 4rem !important;
+//   margin-bottom: 4rem !important;
+//   margin-left: 4rem !important;
+// }
+
+.navbar-spacing {
   margin-top: 4rem !important;
   margin-bottom: 4rem !important;
   margin-left: 4rem !important;
 }
 
-.navbar-nav {
+// .navbar-nav {
+//   margin-right: 5rem !important;
+// }
+
+.navbar-nav-right {
   margin-right: 5rem !important;
+}
+
+.pagy-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }

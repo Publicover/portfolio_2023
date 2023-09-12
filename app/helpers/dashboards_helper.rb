@@ -12,4 +12,14 @@ module DashboardsHelper
   def hamburg_time
     distance_of_time_in_words(Time.zone.today, Date.new(2020, 10, 30))
   end
+
+  def logout_link
+    render 'header/logout' if current_user
+  end
+
+  def admin_dashboard_link
+    return unless current_user
+
+    link_to 'Admin Dashboard', admin_dashboards_path, class: 'nav-link'
+  end
 end
