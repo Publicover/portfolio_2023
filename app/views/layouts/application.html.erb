@@ -17,6 +17,7 @@
     <% unless alert.nil?  %>
       <p class="alert text-center"><%= alert %></p>
     <% end %>
+    <%= render 'header/header' %>
     <%= yield %>
   </body>
 </html>

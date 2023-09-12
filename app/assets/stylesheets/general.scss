@@ -5,8 +5,23 @@ html {
 .page {
   padding-top: 2em;
   padding-bottom: 3em;
-  min-height: 62%;
+  // min-height: 62%;
   margin: auto;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.navbar {
+  font-family: "Montserrat", sans-serif, Arial, serif;
+  background-color: #29BB9C !important;
+}
+
+.navbar-brand {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+  margin-left: 5rem !important;
+}
+
+.navbar-nav {
+  margin-right: 5rem !important;
 }
