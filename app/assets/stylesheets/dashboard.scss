@@ -1,0 +1,29 @@
+.portrait {
+  // padding: 8% 5% 5% 5%;
+  padding: 3rem 3rem 3rem 3rem;
+  background-color: red;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.intro {
+  background-color: #F2F2F2;
+}
+
+#intro-title {
+  margin-top: 3rem;
+  // margin-bottom: 2rem;
+}
+
+#hero-story {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+@include media-breakpoint-down(sm) {
+  #hero-story {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}

@@ -16,10 +16,15 @@ html {
   background-color: #29BB9C !important;
 }
 
+.container-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .navbar-brand {
-  margin-top: 5rem !important;
-  margin-bottom: 5rem !important;
-  margin-left: 5rem !important;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+  margin-left: 4rem !important;
 }
 
 .navbar-nav {
