@@ -5,10 +5,10 @@ html {
 .page {
   padding-top: 2em;
   padding-bottom: 3em;
-  // min-height: 62%;
   margin: auto;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  // margin-left: 3rem;
+  // margin-right: 3rem;
+  background-color: #F2F2F2;
 }
 
 .navbar {
@@ -21,21 +21,11 @@ html {
   padding-right: 0px !important;
 }
 
-// .navbar-brand {
-//   margin-top: 4rem !important;
-//   margin-bottom: 4rem !important;
-//   margin-left: 4rem !important;
-// }
-
 .navbar-spacing {
   margin-top: 4rem !important;
   margin-bottom: 4rem !important;
   margin-left: 4rem !important;
 }
-
-// .navbar-nav {
-//   margin-right: 5rem !important;
-// }
 
 .navbar-nav-right {
   margin-right: 5rem !important;
@@ -51,4 +41,9 @@ html {
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.card {
+  width: 15rem;
+  margin-bottom: 2rem !important;
 }
