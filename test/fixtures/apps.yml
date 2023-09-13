@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Plowr
+  img_url: plower.jpg
+  description: API for snowplows
+  short_description: Portfolio
+  time_period: Winter 2023
+  additional_notes: Many external services
+
+two:
+  name: Tankr
+  img_url: tank.png
+  description: Gas filling
+  short_description: Trucks
+  time_period: Fall 2022
+  additional_notes: Many external services

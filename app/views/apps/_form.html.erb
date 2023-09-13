@@ -1,0 +1,51 @@
+<%= form_with(model: @app) do |form| %>
+  <div class='container'>
+    <%= render 'partials/form_errors', object: @app %>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.label :name, class: 'form-label' %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+      <div class='col'>
+        <%= form.label :img_url, class: 'form-label' %>
+        <%= form.text_field :img_url, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.label :description, class: 'form-label' %>
+        <%= form.text_area :description, class: 'form-control' %>
+      </div>
+      <div class='col'>
+        <%= form.label :short_description, class: 'form-label' %>
+        <%= form.text_field :short_description, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.label :time_period, class: 'form-label' %>
+        <%= form.text_field :time_period, class: 'form-control' %>
+      </div>
+      <div class='col'>
+        <%= form.label :additional_notes, class: 'form-label' %>
+        <%= form.text_area :additional_notes, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.label :biggest_challenge, class: 'form-label' %>
+        <%= form.text_area :biggest_challenge, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class='row mb-3'>
+      <div class='col'>
+        <%= form.submit class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>

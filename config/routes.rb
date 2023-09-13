@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     sessions: 'devise/sessions'
   }
   
+  resources 'apps'
   resources 'dashboards', only: [:index] do 
     collection do 
       get 'admin_dashboard', as: 'admin'
