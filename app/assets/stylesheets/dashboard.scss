@@ -50,5 +50,13 @@
 .card-img-top {
   width: 100%;
   height: 15vw;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.app-img {
+  width: 15vw;
+}
+
+.card-col {
+  margin-bottom: 2rem;
 }

@@ -12,7 +12,7 @@ class AppPolicy < ApplicationPolicy
   end
 
   def show?
-    index?
+    true
   end
 
   def new?

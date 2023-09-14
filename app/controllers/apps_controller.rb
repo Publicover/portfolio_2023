@@ -1,5 +1,6 @@
 class AppsController < ApplicationController
   before_action :set_app, except: [:index, :new, :create]
+  skip_before_action :authenticate_user!, only: [:show]
 
   def index
     @pagy, @apps = pagy(App.all)

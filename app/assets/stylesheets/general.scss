@@ -6,8 +6,6 @@ html {
   padding-top: 2em;
   padding-bottom: 3em;
   margin: auto;
-  // margin-left: 3rem;
-  // margin-right: 3rem;
   background-color: #F2F2F2;
 }
 
@@ -44,6 +42,11 @@ html {
 }
 
 .card {
-  width: 15rem;
-  margin-bottom: 2rem !important;
+  height: 100%;
+  width: 15rem !important;
+  // margin-bottom: 2rem !important;
+}
+
+.card-text {
+  font-size: 0.8rem;
 }

@@ -22,4 +22,12 @@ module DashboardsHelper
 
     link_to 'Admin Dashboard', admin_dashboards_path, class: 'nav-link'
   end
+
+  def show_card_time_period(app)
+    return unless app.time.present? 
+
+    tag :div, class: 'card-footer text-muted' do 
+      app.time_period
+    end
+  end
 end
