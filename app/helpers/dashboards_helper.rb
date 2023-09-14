@@ -24,9 +24,9 @@ module DashboardsHelper
   end
 
   def show_card_time_period(app)
-    return unless app.time.present? 
+    return if app.time.blank?
 
-    tag :div, class: 'card-footer text-muted' do 
+    tag :div, class: 'card-footer text-muted' do
       app.time_period
     end
   end
