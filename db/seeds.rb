@@ -251,9 +251,12 @@ App.create(
 App.create(
   name: 'Ledgr', 
   img_url: 'ledgr.webp', 
-  description: nil, 
+  description: "My wife and I cannot be the only American immigrants to Germany that found the process of paperwork, particularly the tax reporting, to be reasonably straightforward but astonishingly complex. Add to this the fact that the software needed to interface with DATEV lacked robust visualization options. Then there was the price creep of other software needed to manage a distributed team.\n\nSo I decided to create Ledgr on Rails 7.  Admin users start by filling in background information about clients and services, including multiple paragraphs that will appear on proposals that explain each service. A proposal is created by picking the service offerings from a chained dropdown list powered by stimulus. The associated prices and paragraphs are then translated into a web page (with downloadable PDF) the client can digitally sign. The admin then reviews the contract terms before creating it in a database. The contract is then emailed and the program runs a background job to create all invoices needed for the contract. Heroku scheduler alerts the admin through Slack or email when there are invoices to send out (since most of our clients pay on monthly installments).\n\nThe system then does a bunch of math and adds data to the visulization dashboard. It keeps track of who owes how much money, expenses, expense type, yearly profit and the like. The system again uses heroku scheduler to generate monthly reports that are added to the visualization data.\n\nBecause some of our teammates are neurodivergent, I designed the accountant dashboard as a series of buttons that are enabled if there is an email to send out, a proposal to follow up on or something similar—the buttons are disabled if there is no immediate task at hand, reducing the mental load of using the program.", 
   short_description: "This internal app handles all an agency's workflow and invoicing, from proposal creation to tax reporting", 
   time_period: nil, 
   additional_notes: nil, 
-  biggest_challenge: nil
+  biggest_challenge: 'I needed a way to allow clients to view proposals online without the protection of having them sign into the system. I decided to send a link through email 
+                      that uses a secure token generated for each proposal combined with the SGID of the client’s main email address. I then create or find a user based off that 
+                      client email, sign them in and allow them to view and sign the contract. This allows anyone with the link to view the proposal but allows the system to benefit 
+                      from the security of pundit, devise, and plain old obfuscation.'
 )

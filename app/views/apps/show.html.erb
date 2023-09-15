@@ -1,10 +1,41 @@
+<style type='text/css'>
+  .app-parallax {
+    background-image: url(<%= asset_path(@app.img_url)%>);
+    opacity: 0.6;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    /* height: auto; */
+    min-height: 15rem;
+    background-attachment: fixed;
+  }
+  @media only screen and (max-device-width: 1024px) {
+    .app-parallax {
+      background-attachment: scroll;
+      background-size: cover;
+    }
+  }
+</style>
+
+<div class='jumbotron app-parallax'></div>
+
 <div class='container'>
-  <div class='page>
-    <%= render 'partials/page_title' %>
-    <div class='row justify-content-center'>
-      <div class='col text-center'>
-        <%= render @app %>
-      </div>
+  <div class='row'>
+    <div class='col app-title text-center'>
+      <h4><%= @app.name %></h4>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col'>
+      <h4>Description</h4>
+      <p><%= simple_format(@app.description) %></p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col'>
+      <h4>The biggest challenge</h4>
+      <p><%= @app.biggest_challenge %></p>
     </div>
   </div>
 </div>

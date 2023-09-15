@@ -70,4 +70,7 @@ Rails.application.configure do
 
   # devise 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  # to avoid the browser warning about link preloading but not being used
+  config.action_view.preload_links_header = false
 end
