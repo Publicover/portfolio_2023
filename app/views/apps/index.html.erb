@@ -1,38 +1,40 @@
-<div class='page'>
-  <%= render 'partials/page_title' %>
+<div class='container'>
+  <div class='page'>
+    <%= render 'partials/page_title' %>
 
-  <table class='table table-striped table-hover'>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Img url</th>
-        <th>Description</th>
-        <th>Short description</th>
-        <th>Time period</th>
-        <th>Additional notes</th>
-        <th>Biggest challenge</th>
-        <th>Actions</th>
-      <tr>
-    </thead>
-    <tbody>
-      <% @apps.each do |app| %>
+    <table class='table table-striped table-hover'>
+      <thead>
         <tr>
-          <td><%= app.name %></td>
-          <td><%= app.img_url %></td>
-          <td><%= app.description %></td>
-          <td><%= app.short_description %></td>
-          <td><%= app.time_period %></td>
-          <td><%= app.additional_notes %></td>
-          <td><%= app.biggest_challenge %></td>
-          <td>
-            <%= link_to 'View', app_path(app) %> |
-            <%= link_to 'Edit', edit_app_path(app) %> |
-            <%= link_to 'Delete', app_path(app), data: {"turbo-method": :delete, turbo_confirm: 'You sure?'} %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+          <th>Name</th>
+          <th>Img url</th>
+          <th>Description</th>
+          <th>Short description</th>
+          <th>Time period</th>
+          <th>Additional notes</th>
+          <th>Biggest challenge</th>
+          <th>Actions</th>
+        <tr>
+      </thead>
+      <tbody>
+        <% @apps.each do |app| %>
+          <tr>
+            <td><%= app.name %></td>
+            <td><%= app.img_url %></td>
+            <td><%= truncate(app.description) %></td>
+            <td><%= truncate(app.short_description) %></td>
+            <td><%= app.time_period %></td>
+            <td><%= app.additional_notes %></td>
+            <td><%= truncate(app.biggest_challenge) %></td>
+            <td>
+              <%= link_to 'View', app_path(app) %> |
+              <%= link_to 'Edit', edit_app_path(app) %> |
+              <%= link_to 'Delete', app_path(app), data: {"turbo-method": :delete, turbo_confirm: 'You sure?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <%= render 'partials/pagy_menu' %>

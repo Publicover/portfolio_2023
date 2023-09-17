@@ -1,9 +1,9 @@
 class AppsController < ApplicationController
-  before_action :set_app, except: [:index, :new, :create]
-  skip_before_action :authenticate_user!, only: [:show]
+  before_action :set_app, except: [:index, :new, :create, :tagged]
+  skip_before_action :authenticate_user!, only: [:show, :tagged]
 
   def index
-    @pagy, @apps = pagy(App.all)
+    @pagy, @apps = pagy(App.all.order(created_at: :desc))
     authorize @apps
   end
 
@@ -35,6 +35,16 @@ class AppsController < ApplicationController
   def destroy
     @app.destroy
     redirect_to apps_path, notice: 'Delete successful.'
+  end
+
+  def tagged
+    if params[:tag].present?
+      @apps = App.tagged_with(params[:tag])
+    else
+      @pagy, @apps = pagy(App.all.order(created_at: :desc))
+    end
+    @tag = params[:tag]
+    authorize @apps
   end
 
   private

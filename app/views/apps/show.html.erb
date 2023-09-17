@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    /* height: auto; */
     min-height: 15rem;
     background-attachment: fixed;
   }
@@ -36,6 +35,14 @@
     <div class='col'>
       <h4>The biggest challenge</h4>
       <p><%= @app.biggest_challenge %></p>
+    </div>
+  </div>
+  <div class='row skill-block'>
+    <div class='col'>
+      <h4>Skills</h4>
+      <% @app.tag_list.each do |t| %>
+        <%= link_to "# #{t}", tagged_path(tag: t), class: 'btn btn-sm btn-secondary mb-2 mt-2' %>
+      <% end %>
     </div>
   </div>
 </div>

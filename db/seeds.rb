@@ -235,7 +235,7 @@ App.create(
   short_description: 'Create a Meyers Briggs–style test and generate individual cohort reports while visusaling total statistical trends', 
   time_period: nil, 
   additional_notes: nil, 
-  biggest_challenge: nil
+  biggest_challenge: 'Since the order of the answers of each test are presented in random order, it was a little more slippery holding onto the multiple answers the user had already given if they wanted to hit the back button two dozen times.'
 )
 
 App.create(
@@ -245,7 +245,7 @@ App.create(
   short_description: 'Record recipes and pick meals to generate a grocery list updated in real time', 
   time_period: nil, 
   additional_notes: nil, 
-  biggest_challenge: nil
+  biggest_challenge: 'There’s no (free) external API that gives calorie counts to the degree of accuracy the app needs to do the math properly. Google, for instance, returns that green bell peppers have 0 calories per gram as the first result. That’s just clearly not true. If a recipe calls for 74 grams of bell pepper, that’s 15 calories added to the total. So the system does math with 0.185/gram, which means that it’s up to users to enter that kind of information in the first place. Which means it has to then be associated with the recipe values. The math was straightforward, but i do not like pushing so much detailed work onto the user.'
 )
 
 App.create(

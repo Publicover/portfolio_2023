@@ -1,0 +1,14 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col text-center'>
+      <h4 class='mt-5 mb-5'>Apps using <%= @tag %></h4>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col text-center'>
+      <% @apps.tagged_with(params[:tag], any: true).each do |app| %>
+        <%= render 'partials/card', app: app %>
+      <% end %>
+    </div>
+  </div>
+</div>

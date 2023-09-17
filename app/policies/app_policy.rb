@@ -35,7 +35,11 @@ class AppPolicy < ApplicationPolicy
     index?
   end
 
+  def tagged?
+    show?
+  end
+
   def permitted_attributes
-    [:name, :img_url, :description, :short_description, :time_period, :additional_notes, :biggest_challenge]
+    [:name, :img_url, :description, :short_description, :time_period, :additional_notes, :biggest_challenge, :tag_list]
   end
 end

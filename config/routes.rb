@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     end
   end
   resources 'skills'
-  
+
+  get '/tagged', to: "apps#tagged", as: :tagged
+
   root 'dashboards#index'
 end
