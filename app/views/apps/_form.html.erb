@@ -44,7 +44,7 @@
 
     <div class='row mb-3'>
       <div class='col'>
-        <%= form.label 'Skills list', class: 'form-label' %>
+        <%= form.label :tag_list, 'Skills list', class: 'form-label' %>
         <%= form.text_field :tag_list, value: @app.send(:tag_list).to_s, class: 'form-control' %>
       </div>
     </div>
