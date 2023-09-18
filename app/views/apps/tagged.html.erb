@@ -5,10 +5,8 @@
     </div>
   </div>
   <div class='row'>
-    <div class='col text-center'>
-      <% @apps.tagged_with(params[:tag], any: true).each do |app| %>
-        <%= render 'partials/card', app: app %>
-      <% end %>
-    </div>
+    <% @apps.tagged_with(params[:tag], any: true).each do |app| %>
+      <%= render 'partials/card', app: app %>
+    <% end %>
   </div>
 </div>

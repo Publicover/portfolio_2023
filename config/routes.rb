@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   }
   
   resources 'apps'
+  resources 'clients'
   resources 'dashboards', only: [:index] do 
     collection do 
       get 'admin_dashboard', as: 'admin'

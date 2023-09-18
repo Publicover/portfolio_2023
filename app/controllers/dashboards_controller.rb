@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
 
   def index
     @apps = App.all.order(created_at: :desc)
+    @clients = Client.all
   end
 
   def admin_dashboard; end

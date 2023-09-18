@@ -39,7 +39,7 @@ class AppsController < ApplicationController
 
   def tagged
     if params[:tag].present?
-      @apps = App.tagged_with(params[:tag])
+      @apps = App.tagged_with(params[:tag]).order(created_at: :desc)
     else
       @pagy, @apps = pagy(App.all.order(created_at: :desc))
     end

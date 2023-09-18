@@ -10,4 +10,16 @@ class AppTest < ActiveSupport::TestCase
     assert App.column_names.include?('additional_notes')
     assert App.column_names.include?('biggest_challenge')
   end
+
+  test 'should know client' do 
+    assert_equal clients(:one), apps(:one).client
+  end
+
+  test 'should delegate client name' do 
+    assert_equal clients(:one).name, apps(:one).client_name
+  end 
+
+  test 'should delegate client time_period' do 
+    assert_equal clients(:one).time_period, apps(:one).client_time_period
+  end
 end

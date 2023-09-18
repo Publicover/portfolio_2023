@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AppPolicy < ApplicationPolicy
+class ClientPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -12,7 +12,7 @@ class AppPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    index?
   end
 
   def new?
@@ -40,16 +40,6 @@ class AppPolicy < ApplicationPolicy
   end
 
   def permitted_attributes
-    [
-      :name,
-      :img_url,
-      :description,
-      :short_description,
-      :time_period,
-      :additional_notes,
-      :biggest_challenge,
-      :tag_list,
-      :client_id
-    ]
+    [:name, :time_period]
   end
 end

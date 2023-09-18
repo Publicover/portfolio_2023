@@ -6,5 +6,9 @@
       <p class='card-text'><%= app.short_description || 'nope' %></p>
       <%= link_to 'More', app_path(app), class: 'btn btn-outline-secondary mt-auto' %>
     </div>
+    <div class="card-footer text-muted">
+      <%= app.client.name %><br>
+      <%= app.client.time_period %>
+    </div>
   </div>
 </div>

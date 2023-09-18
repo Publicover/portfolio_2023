@@ -24,13 +24,15 @@ class AppsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('App.count') do
       post apps_path, params: {
         app: {
+          client_id: clients(:one).id,
           name: Faker::Business.name, 
           img_url: "#{Faker::Lorem}.png", 
           description: Faker::Lorem.sentence(word_count: 15), 
           short_description: Faker::Lorem.sentence(word_count: 5), 
           time_period: 'Winter 2020', 
           additional_notes: Faker::Lorem.sentence(word_count: 25), 
-          biggest_challenge: Faker::Lorem.sentence(word_count: 25)
+          biggest_challenge: Faker::Lorem.sentence(word_count: 25),
+          tag_list: 'Rails 7, best computer skills ever, Bootstrap 5'
       }
     }
     end

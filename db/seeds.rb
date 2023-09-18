@@ -28,7 +28,10 @@ Skill.create(name: 'Mailgun')
 Skill.create(name: 'heroku')
 Skill.create(name: 'nokogiri')
 
+free = Client.create(name: 'Unaffiliated Freelance', time_period: 'Spring 2016')
+
 App.create(
+  client_id: free.id,
   name: 'MLA Event Registration', 
   img_url: 'mla.png', 
   description: "Before I went to code school but after I had been let go from yet another editing job because it lost major clients, my wife and I started a boutique advertising agency. The frustration of putting together multiple Wordpress sites that made me pay for plugins that could actually communicate with a database is actually what drove me to code school.\n\nSo this was my first major freelance project out of code school, and I maintained this for the next five years. It was a pretty straightforward CRUD app. Members of the Marine Leadership Alliance would access the URL and enter their reservation information.\n\nThe admin for this registration had a very specific workflow and was not interested in modifying anything, so the process mimicked the way she did it on paper when it first started. Emails were sent out to four admins each time a user completed registration. The main admin got a CSV attachment that she would import into MS Access 2005. I built an admin panel that required a login, and she would use this to track which CSVs she might not have gotten via email.", 
@@ -39,7 +42,10 @@ App.create(
   tag_list: 'Rails 5, postgresql, HTML, CSS, mailgun, DMARC'
 )
 
+ward = Client.create(name: 'Ward and Smith', time_period: 'Summer 2016')
+
 App.create(
+  client_id: ward.id,
   name: 'Caseflow', 
   img_url: 'caseflow.png', 
   description: "Caseflow was a program designed to identify which files and documents might need to go to which lawyers and paralegals to prepare for a trial. It worked on top of MS Access. My short stint with them saw me setting up various templates depending on which legal issue was being discussed. The biggest problem was that Caseflow had its own proprietary IDE that worked as a coding interface, so users had to click a virtual keyboard with a mouse. Also, there were no array-like data types. Also also, the software could only handle 50 variables for the entire case library, i.e., you could not save, say, a list of case documents needed.", 
@@ -50,7 +56,10 @@ App.create(
   tag_list: 'Casflow'
 )
 
+arm = Client.create(name: 'Armstand, Inc.', time_period: 'Fall 2016–Spring 2017')
+
 App.create(
+  client_id: arm.id,
   name: 'Kruted', 
   img_url: 'kruted.svg', 
   description: "Kruted was a Durham startup that wanted to make something like LinkedIn that connected high school athletes with college recruiters. The app had a pretty JavaScript-heavy front end, and the codebase itself was pretty disorganized.\n\nMy first task was to make sure we didn't mess anything up as the CTO and lead designer kept changing their minds, so I created many system tests with RSpec and capybara. I then went through the site for WCAG compliance. The database also had several problems, so I was able to re-architecture the models' relationships. I was responsible for a few features—I’m probably proudest of making a user flow for parents who could sign in to see who and how their children were communicating with adults on the platform.", 
@@ -61,7 +70,10 @@ App.create(
   tag_list: "Rails 5, RSpec, capybara, WCAG"
 )
 
+dash = Client.create(name: 'dash creative', time_period: 'Fall 2017–Spring 2019')
+
 App.create(
+  client_id: dash.id,
   name: 'Empathy Lab', 
   img_url: 'science.jpeg', 
   description: "A large part of my wife's work used to be user research. She didn't have a good way to record her data in a way that she liked, so we put together a plan for the Empathy Lab. It was basically a smaller version of Presentation Style Indicator in that it hosted the surveys themselves but did not have the flexibility to create new testing rubrics on the fly.\n\nAdmins log in to record organizations and the members of those organizations. Admins then create any and all open-ended surveys. Organization members can take the surveys and their answers are recorded. The back end digs in for some simple textual analysis, looking for keyword saturation identified by the admin. Results are served to the admin through the admin panel, and reports can be generated that compare the performance of one cohort to another. Results and reports can also be divided by demographic information.", 
@@ -73,6 +85,7 @@ App.create(
 )
 
 App.create(
+  client_id: dash.id,
   name: 'Samuel Johnson API', 
   img_url: 'sammy_j.jpeg', 
   description: "This dictionary from 1775 is truly hilarious. In order to include it in the Super Dictionary, I built a web scraper to collect dictionary entries found online. It used the nokogiri and mechanize gems. It traversed the online version of the dictionary that did not have an API and traversed entries by URL. These entries were dumped into a postgresql database and served via JSON.", 
@@ -84,6 +97,7 @@ App.create(
 )
 
 App.create(
+  client_id: dash.id,
   name: 'Dash Billing', 
   img_url: 'billing.jpeg', 
   description: "dash creative worked with a lot of startups. We didn't want to pay for invoice management software, so I was able to put something together. It was a relatively straightforward CRUD app that let admins create a client list and enter invoicing information into one of several templates. A PDF was emailed to clients who were able to click another link to be taken to the app's Stripe payments page.", 
@@ -95,6 +109,7 @@ App.create(
 )
 
 App.create(
+  client_id: dash.id,
   name: 'Super Dictionary', 
   img_url: 'super_dictionary.webp', 
   description: "This was created to let users vote on which dictionary gives the best definition for their uses. My previous career as writer and editor left me with some pretty strong opinions about how dictionaries work in modern America. This was created to illustrate the argument for prescriptivism.\n\nUsers enter a word. Definitions are returned from Webster's, Oxford, Urban Dictionary and my own Samuel Johnson Dictionary API. Results are presented in such a way to show how definitions from Urban Dictionary and Webster's logically rhyme, as descriptivist texts. The prescriptivist texts did the same. Users voted on which definition best fit their needs.", 
@@ -106,6 +121,7 @@ App.create(
 )
 
 App.create(
+  client_id: dash.id,
   name: 'Dash Incubator', 
   img_url: 'incubator.webp', 
   description: "This was created to handle course materials for one of the startup incubators in Greensboro, NC. Multiple admins would create their own course materials and curricula, upload it all into the system, then students would complete the assignments and upload the results. Additional reading materials were also stored in the app and available to everyone. The system ran background jobs to check if all students had turned in materials before the deadline, and it would alert students who had not yet done it through automated emails.", 
@@ -116,7 +132,10 @@ App.create(
   tag_list: "Rails 6, ajax, S3, heroku, postrgresql, mailgun, DMARC"
 )
 
+dalcom = Client.create(name: 'Dalcom Consulting', time_period: 'Spring 2019–Fall 2019')
+
 App.create(
+  client_id: dalcom.id,
   name: 'eLicensee', 
   img_url: 'elicensee.png', 
   description: "This handled inventory and licensing for liquor stores regulated by North Carolina. Part of the project was to rewrite this Rails 2 app in Rails 6. The rest of the project was to handle tickets created by Dalcom's help desk. Since the app was so old, it broke all the time for reasons that weren't exactly clear. It also had to take readings from handheld inventory scanners, which had their own quirks to deal with. Everything had to go through Microsoft Navision. \n\nThe app generated labels, reordered stock that was low, resolved stock and reported to North Carolina regulatory agencies. It was a mult-tenant app so each of the 35 versions had small differences among them.", 
@@ -128,6 +147,7 @@ App.create(
 )
 
 App.create(
+  client_id: dalcom.id,
   name: 'ecoFlow', 
   img_url: 'ecoflow.png', 
   description: "This was the app for a hazardous materials disposal company. I came on when the owner wanted to update the legal classification of various materials due to changing laws. This was done mostly through API calls to an API owned by the state of North Carolina.", 
@@ -138,7 +158,10 @@ App.create(
   tag_list: 'Rails 4, NC API, JSON, REST, postrgresql'
 )
 
+airship = Client.create(name: 'Airship, LLC', time_period: 'Fall 2019–Winter 2020')
+
 App.create(
+  client_id: airship.id,
   name: 'ASOF', 
   img_url: 'asof.jpeg', 
   description: "The Alabama Scholarship Opportunity Fund connects low-income students with school tuition vouchers. It was built to digitize an intake process that was wholly on paper.\n\nThe app saw about 10k users log in to enter the selection process by filling in demographic information in a long series of forms and uploading tax information. For most of the year, there wasn't much need for users to log in because most everything else was handled by email. My part on this team was mostly styling and admin panels due to the large number of devs we had working on it. ", 
@@ -150,6 +173,7 @@ App.create(
 )
 
 App.create(
+  client_id: airship.id,
   name: 'Tankr API', 
   img_url: 'tankr.jpeg', 
   description: "This API was hooked into a React Native front end with the admin panel in plain Rails. The startup's mission is simple: Users sign up to get their car filled with gas. The drivers come fill the cars with gas.\n\nUser signup was pretty standard to implement. It had to include information about their car's make, model and license plate number as well as general location. The fleet had three trucks to respond to service orders. The API needed to break all the stops for the day into three geographic sections, then decide how many trucks are needed in each. Also, it takes 10 minutes to perform a service stop, so the app was designed to have four two-hour blocks of time (with an empty hour in the middle for drivers to eat lunch). The hardest part was figuring out what to do with incoming orders while the drivers were out in the field.\n\nLeaning heavily on the Open Source Routing Machine, driver routes were calculated on the fly. If there was time left in a timeslot, the stop was inserted into the route in real time. If there wasn't, the stop was moved to the next available time slot and the route was recalculated. Once a stop belonged to a timeslot, it was not moved, so finding time for a new stop never jeopardized the service stop of someone who was already expecting it in a specific range of time for that day.\n\nThe admin panel handled all route reporting (with a JavaScript-heavy historical record of serviced stops visualized in Google Maps) and invoicing through Stripe. There was a coupon system that handled both percentages and raw amounts. The math for all this was straightforward but grew in complexity as each stop was added to a timeslot.", 
@@ -157,10 +181,13 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Timing and state change. We didn't want to bump someone from one time slot to the next, but we also didn't want to have the drivers chasing new service stops for the last half of their shift. We also also didn't want to hammer the Open Source Routing Machine whose EULA forbids excessive use but does not put the terms more concretely than that.", 
-  tag_list: 'Rails 6, REST, GraphQL, JWT auth, Nomatim API, JSON, Open Source Routing Machine, Stripe API, webhooks, heroku, postgresql, Google Maps'
+  tag_list: 'Rails 6, REST, GraphQL, JWT auth, Nomatim API, JSON, Open Source Routing Machine, Stripe API, webhooks, heroku, postgresql, Google Maps, mailgun, DMARC, Amazon SNS'
 )
 
+pub = Client.create(name: 'Publicover & Co.', time_period: 'Winter 2020–present')
+
 App.create(
+  client_id: pub.id,
   name: 'Bad Pitch Generator', 
   img_url: 'bad_pitch.png', 
   description: "Another result of the Publicover & Co. app jam, this simple site lets users click a button to receive a satirical elevator pitch for a startup. There's an admin panel for adjusting different nouns, verbs and modifiers. It was such a hit that it's presently being used as a promotional tool for Publicover & Co. You can check out the raw version at worse-pitch-generator.herokuapp.com.", 
@@ -172,6 +199,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'Plowr API', 
   img_url: 'plower.jpeg', 
   description: "I had just landed in Hamburg after leaving an agency job, and I was unsure if I was going to move to freelance or look for more agency work. Plower API is a portfolio piece for either choice. It simulates a snowplow business in Ashtabula, OH, my hometown, a place used to seeing heavy snow.\n\nThis Rails and GraphQL API uses JWT for authorization. There's no front end. Users are admins, drivers or customers. Admins set a service menu with prices. There's an admin panel where they approve service to customers and set up billing. Users sign up for the services they want and are given the option to be an Early Bird customer, which guarantees their driveway will be plowed before 7:30, the time most people leave for work.\n\nEach day at 3:00 AM and 5:00 AM, the system reaches out to a local weather service API. If there is a significant amount of snow that has fallen by that time, the route calculation services are kicked off. These can also be activated by a seeing a specific rate of snowfall that means driveways will need to be plowed by 7:00 AM even if the threshold from the first criterion is not met. To determine what route a driver should take, the system reaches out to the Open Source Routing Machine twice: once to calculate the shortest route for the Early Bird customers, then again to create the route for the remaining customers. Drivers plow all the snow, and, when the routes for the day are marked as complete, the user receives an email requesting payment through the system via the Stripe API.", 
@@ -183,6 +211,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'German Holiday Checker', 
   img_url: 'holiday.jpeg', 
   description: 'Germany can be a confusing place when you first move here. There are literally twice as many public holidays as I, as an American, am used to. This was our first Publicover & Co. app jam result, and it has more to do with styling than anything else. Remember those joke sites in the early 2000s that were all over the place? Like whatthe****shouldimakefordinner.com? You visit, hit a button, and something very blunt happens. Well, this is the same. We have a database of all the German holidays from now to five years in the future, and the site either says the name of the holiday on the root page or just “No” in large text, checking against Time.zone.today. Expat groups on Facebook thought this was hilarious, which was basically all that we were trying to do.', 
@@ -194,6 +223,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'Breathing Clean', 
   img_url: 'smoke.png', 
   description: "The result of one of the Publicover & Co. app jams, this is a JavaScript incremental browser game that helps smokers focus on not smoking. It simulates the first 72 hours of tobacco cessation.  It works like any other incremental game, except there is a time limit per click. This is represented by a constantly refreshing progress bar at the bottom of the screen. Users must click once per second to gain 1 willpower, the main resource. If the button is not clicked, the user will lose 1 willpower. If the balance goes negative, the game still continues but users must now click twice per second. Users can spend willpower on upgrades that do things such as increase the time interval to earn willpower, earning multiple willpowers per click and clicking multipliers.", 
@@ -205,6 +235,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'Pub Chalk', 
   img_url: 'pubchalk.jpeg', 
   description: "Covid hit everyone pretty hard in a lot of different ways, only some of which were expected. My brother's dart league in Columbus, OH wanted to keep playing while being following shelter-in-place edicts. Free software designed for this was in its infancy and lacked real-time scorekeeping that people outside of the game could watch.\n\nThis is basically what stimulus was invented to do. Users are either admins, team captains or players. Teams are entered as are intervals of play (like a league game every three days or one week, for instance) and the system designs a bracket. On game night, users log in to their own game but can see scoreboards for other games as they happen. Only captains can record scores. After the season is over, the system calculates the team rankings and saves that into a historical record.", 
@@ -216,6 +247,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'Presentation Style Indicator', 
   img_url: 'ssi.png', 
   description: nil, 
@@ -227,6 +259,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'Grocery Listr', 
   img_url: 'grocery.png', 
   description: nil, 
@@ -238,6 +271,7 @@ App.create(
 )
 
 App.create(
+  client_id: pub.id,
   name: 'Ledgr', 
   img_url: 'ledgr.webp', 
   description: "My wife and I cannot be the only American immigrants to Germany that found the process of paperwork, particularly the tax reporting, to be reasonably straightforward but astonishingly complex. Add to this the fact that the software needed to interface with DATEV lacked robust visualization options. Then there was the price creep of other software needed to manage a distributed team.\n\nSo I decided to create Ledgr on Rails 7.  Admin users start by filling in background information about clients and services, including multiple paragraphs that will appear on proposals that explain each service. A proposal is created by picking the service offerings from a chained dropdown list powered by stimulus. The associated prices and paragraphs are then translated into a web page (with downloadable PDF) the client can digitally sign. The admin then reviews the contract terms before creating it in a database. The contract is then emailed and the program runs a background job to create all invoices needed for the contract. Heroku scheduler alerts the admin through Slack or email when there are invoices to send out (since most of our clients pay on monthly installments).\n\nThe system then does a bunch of math and adds data to the visulization dashboard. It keeps track of who owes how much money, expenses, expense type, yearly profit and the like. The system again uses heroku scheduler to generate monthly reports that are added to the visualization data.\n\nBecause some of our teammates are neurodivergent, I designed the accountant dashboard as a series of buttons that are enabled if there is an email to send out, a proposal to follow up on or something similar—the buttons are disabled if there is no immediate task at hand, reducing the mental load of using the program.", 

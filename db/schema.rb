@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_15_080316) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_145529) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_15_080316) do
     t.string "time_period"
     t.text "additional_notes"
     t.text "biggest_challenge"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "client_id", null: false
+    t.index ["client_id"], name: "index_apps_on_client_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.string "time_period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -76,5 +85,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_15_080316) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "apps", "clients"
   add_foreign_key "taggings", "tags"
 end
