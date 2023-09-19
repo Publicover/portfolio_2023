@@ -39,7 +39,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "This is where I learned that my writing and editing background really helped with client relations. The client didn't really understand what computers were capable of, so I was able to walk her through unfamiliar operations like CSV import and switching tabs on an admin panel.", 
-  tag_list: 'Rails 5, postgresql, HTML, CSS, mailgun, DMARC'
+  tag_list: 'Rails 5, postgresql, HTML, CSS, mailgun, RSPec, DMARC'
 )
 
 ward = Client.create(name: 'Ward and Smith', time_period: 'Summer 2016')
@@ -53,7 +53,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "I've never gone to a restaurant and asked if the hamburger came with a bun. Similarly, I did not ask if I would have to code without using a keyboard.", 
-  tag_list: 'Casflow'
+  tag_list: 'Caseflow'
 )
 
 arm = Client.create(name: 'Armstand, Inc.', time_period: 'Fall 2016–Spring 2017')
@@ -67,7 +67,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Honestly, I found this team hard to communicate with. The three main stakeholders only talked about how much money they could make with the product instead of what the product could do for its users. It also wasnt very friendly to work-life balance.", 
-  tag_list: "Rails 5, RSpec, capybara, WCAG"
+  tag_list: "RSpec, WCAG, capybara, Rails 5"
 )
 
 dash = Client.create(name: 'dash creative', time_period: 'Fall 2017–Spring 2019')
@@ -81,7 +81,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "I'd never done keyword analysis before this. I was lucky my wife was able to walk me through her process because there's a lot of marketing math I just don't know about. ",
-  tag_list: "Rails 5, Stripe API, postgresql, mailgun, DMARC"
+  tag_list: "Rails 5, Stripe API, postgresql, mailgun, DMARC, capybara, RSpec"
 )
 
 App.create(
@@ -93,7 +93,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Formatting large chunks of text into something suitable for a database was tricky, but I dove deep into regex to make it work.",
-  tag_list: "Rails 5, nokogiri, mechanize, postgresql, heroku"
+  tag_list: "Rails 5, nokogiri, mechanize, postgresql, heroku, RSpec"
 )
 
 App.create(
@@ -105,7 +105,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "This is when I discovered how many steps it takes to get DMARC up and running through heroku as well as how to style a PDF.",
-  tag_list: "Rails 5, heroku, postgresql, mailgun, DMARC, grover, HTML, CSS"
+  tag_list: "Rails 5, heroku, postgresql, mailgun, DMARC, grover, HTML, CSS, capybara, RSpec"
 )
 
 App.create(
@@ -117,7 +117,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "It was pretty straightforward, but formatting results from each dictionary results took a minute to untangle when I was hoping for something more standardized.", 
-  tag_list: 'Rails 5, API, REST, JSON, XML, heroku, postrgresql'
+  tag_list: 'Rails 5, API, REST, JSON, XML, heroku, postrgresql, RSpec'
 )
 
 App.create(
@@ -129,7 +129,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "This was on such a tight timeline that I have always felt I could have done better with more time. These kinds of choices are regular in any kind of engineering, but this timeline was so tight I didn't feel like I had the option of exploring anything but the most quick and dirty ways to complete features.",
-  tag_list: "Rails 6, ajax, S3, heroku, postrgresql, mailgun, DMARC"
+  tag_list: "Rails 6, ajax, S3, heroku, postrgresql, mailgun, DMARC, RSpec"
 )
 
 dalcom = Client.create(name: 'Dalcom Consulting', time_period: 'Spring 2019–Fall 2019')
@@ -143,7 +143,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Rewriting the app into the contemporary version of Rails was great fun, but the app was on its last legs. Predicting breaks on the running program was nearly impossible, and made harder by Dalcom's choice to not let me access server logs due to legal concerns, so I could not see explicitly which calls were breaking which parts.",
-  tag_list: 'Rails 2, MS Navision, JSON, XML, REST, SOAP, MySQL'
+  tag_list: 'Rails 2, MS Navision, JSON, XML, REST, SOAP, MySQL, HTML, CSS'
 )
 
 App.create(
@@ -155,7 +155,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "The API I had to reach out to was rather archaic and required multiple calls instead of batching. I had to lean on the documentation quite heavily for this one.",
-  tag_list: 'Rails 4, NC API, JSON, REST, postrgresql'
+  tag_list: 'Rails 4, NC API, JSON, REST, postrgresql, HTML, CSS, RSpec'
 )
 
 airship = Client.create(name: 'Airship, LLC', time_period: 'Fall 2019–Winter 2020')
@@ -169,7 +169,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Recreating complex forms and allowing admin users to filter and sort without losing any information from the params. The solutions to both of these are relatively straightforward.", 
-  tag_list: 'Rails 6, CSS, HTML, Bootstrap 5'
+  tag_list: 'Rails 6, CSS, HTML, Bootstrap 5, minitest'
 )
 
 App.create(
@@ -181,7 +181,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Timing and state change. We didn't want to bump someone from one time slot to the next, but we also didn't want to have the drivers chasing new service stops for the last half of their shift. We also also didn't want to hammer the Open Source Routing Machine whose EULA forbids excessive use but does not put the terms more concretely than that.", 
-  tag_list: 'Rails 6, REST, GraphQL, JWT auth, Nomatim API, JSON, Open Source Routing Machine, Stripe API, webhooks, heroku, postgresql, Google Maps, mailgun, DMARC, Amazon SNS'
+  tag_list: 'Rails 6, REST, GraphQL, JWT auth, Nomatim API, JSON, Open Source Routing Machine, Stripe API, webhooks, heroku, postgresql, minitest, Google Maps, mailgun, DMARC, Amazon SNS'
 )
 
 pub = Client.create(name: 'Publicover & Co.', time_period: 'Winter 2020–present')
@@ -195,7 +195,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "We have extremely talented designers on our team, but their designs did not translate to easy CSS.", 
-  tag_list: "Rails 6, ajax, JavaScript"
+  tag_list: "Rails 6, minitest, JavaScript, ajax, HTML, CSS"
 )
 
 App.create(
@@ -207,7 +207,7 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "Just like with Tankr, state management of the order along with the routing concerns took more than a minute to untangle.", 
-  tag_list: 'Rails 6, REST, GraphQL, JWT auth, Nomatim API, Weatherbit API, JSON, Open Source Routing Machine, Stripe API, webhooks, heroku, postgresql'
+  tag_list: 'Rails 6, REST, GraphQL, JWT auth, Nomatim API, Weatherbit API, JSON, Open Source Routing Machine, Stripe API, webhooks, heroku, postgresql, minitest'
 )
 
 App.create(
@@ -243,30 +243,30 @@ App.create(
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: "This was one of the larger dart leagues my brother has belonged to, with a lot of folks who have played locally for a very long time. They wanted live video feeds of each game, but they did't want to pay for any sort of pre-designed system or for hosting (the resources needed for multiple simultaneous video streams couldn't fit on heroku's free tier when that existed). It sufficed for about a year before the league decided to use one of the newer, much larger and scaled competitors with reasonable subscription fees.",
-  tag_list: 'Rails 6, hotwire, stimulus, postgresql, heroku, S3, Bootstrap 5'
+  tag_list: 'Rails 6, hotwire, stimulus, postgresql, heroku, S3, Bootstrap 5, minitest'
 )
 
 App.create(
   client_id: pub.id,
   name: 'Presentation Style Indicator', 
   img_url: 'ssi.png', 
-  description: nil, 
+  description: "My client was a presentation coach. She has a proprietary test that breaks speaking styles into eight presentation archetypes much as the Meyers Briggs test does for personalities. She was using Typeform and Mailchimp to run the campaigns, but neither piece of software was meeting her exact needs. So Presentation Style Indicator is a 100% custom job.\n\nThe app needs an admin to first set up the archetypes that will come in the results. Next comes the questions of each test and the several multiple choice or essay answers. The admin then inputs via CSV email address of the next cohort to take the test (the admin could do it by hand if they're feeling particularly analog that day). The members of the cohort are emailed a link to their particular test, they take it, and the system records their answers while calculating which archetype they fall into. A report is generated for each user, and a report on the responses of the cohort is generated for the admin. The system also keeps reports on all users who have ever used the system for a visualization panel.", 
   short_description: 'Create a Meyers Briggs–style test and generate individual cohort reports while visusaling total statistical trends', 
   time_period: nil, 
   additional_notes: nil, 
   biggest_challenge: 'Since the order of the answers of each test are presented in random order, it was a little more slippery holding onto the multiple answers the user had already given if they wanted to hit the back button two dozen times.', 
-  tag_list: 'Rails 6, stimulus, postgresql, heroku, S3, Bootstrap 5, mailgun, DMARC'
+  tag_list: 'Rails 6, stimulus, postgresql, heroku, S3, Bootstrap 5, mailgun, DMARC, minitest'
 )
 
 App.create(
   client_id: pub.id,
   name: 'Grocery Listr', 
   img_url: 'grocery.png', 
-  description: nil, 
+  description: "A client needed a simple app that could broadcast with a pub-sub model for the items on a grocery list. After I delivered that, I tinkered with it a bit more to make it the app it is today.\n\nThere's a fair amount of setup that needs to happen for the app to work properly. Firstly, users are grouped by family units, so anyone acting in the app acts for the household. Users add individual foods along with caloric values. Users can then add recipes and combine those recipes to create meals. There’s a lot of math happening on the backend to get accurate calorie and nutritional information, but the short version is that users can pick meals or have the system pick randomly for you from the meals belonging to the family. A grocery list is generated that can handle multiple simultaneous grocery shoppers at the same location or different ones.\n\nThe calculations are pretty precise, making sure that if you need, say, one bell pepper each for two different meals, the grocery list just says 'Bell Peppers: 2 whole.' This is what allows calorie counts to be accurate, giving each entree (and most meals) a measurement of calorie per gram.", 
   short_description: 'Record recipes and pick meals to generate a grocery list updated in real time', 
   time_period: nil, 
   additional_notes: nil, 
-  biggest_challenge: "There's no (free) external API that gives calorie counts to the degree of accuracy the app needs to do the math properly. Google, for instance, returns that green bell peppers have 0 calories per gram as the first result. That’s just clearly not true. If a recipe calls for 74 grams of bell pepper, that’s 15 calories added to the total. So the system does math with 0.185/gram, which means that it's up to users to enter that kind of information in the first place. Which means it has to then be associated with the recipe values. The math was straightforward, but i do not like pushing so much detailed work onto the user.", 
+  biggest_challenge: "There's no (free) external API that gives calorie counts to the degree of accuracy the app needs to do the math properly. Google, for instance, returns that green bell peppers have 0 calories per gram as the first result. That's just clearly not true. If a recipe calls for 74 grams of bell pepper, that's 15 calories added to the total. So the system does math with 0.185/gram, which means that it's up to users to enter that kind of information in the first place. Which means it has to then be associated with the recipe values. The math was straightforward, but i do not like pushing so much detailed work onto the user.", 
   tag_list: "Rails 7, stimulus, hotwire, minitest, postgresql, heroku, S3, Bootstrap 5"
 )
 

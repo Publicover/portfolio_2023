@@ -9,9 +9,8 @@
           <th>Img url</th>
           <th>Description</th>
           <th>Short description</th>
-          <th>Time period</th>
-          <th>Additional notes</th>
           <th>Biggest challenge</th>
+          <th>Tag List</th>
           <th>Actions</th>
         <tr>
       </thead>
@@ -22,9 +21,8 @@
             <td><%= app.img_url %></td>
             <td><%= truncate(app.description) %></td>
             <td><%= truncate(app.short_description) %></td>
-            <td><%= app.time_period %></td>
-            <td><%= app.additional_notes %></td>
             <td><%= truncate(app.biggest_challenge) %></td>
+            <td><%= app.tag_list %></td>
             <td>
               <%= link_to 'View', app_path(app) %> |
               <%= link_to 'Edit', edit_app_path(app) %> |
