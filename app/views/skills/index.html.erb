@@ -2,26 +2,32 @@
   <div class='page'>
     <%= render 'partials/page_title' %>
 
-    <table class='table table-striped table-hover'>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Actions</th>
-        <tr>
-      </thead>
-      <tbody>
-        <% @skills.each do |skill| %>
-          <tr>
-            <td><%= skill.name %></td>
-            <td>
-              <%= link_to 'View', skill_path(skill) %> |
-              <%= link_to 'Edit', edit_skill_path(skill) %> |
-              <%= link_to 'Delete', skill_path(skill), data: {"turbo-method": :delete, turbo_confirm: 'You sure?'} %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <div class='row'>
+      <div class='col'>
+        <table class='table table-striped table-hover table-bordered'>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            <tr>
+          </thead>
+          <tbody>
+            <% @skills.each do |skill| %>
+              <tr>
+                <td><%= skill.name %></td>
+                <td>
+                  <%= link_to 'View', skill_path(skill) %> |
+                  <%= link_to 'Edit', edit_skill_path(skill) %> |
+                  <%= link_to 'Delete', skill_path(skill), data: {"turbo-method": :delete, turbo_confirm: 'You sure?'} %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  
   </div>
 </div>
 

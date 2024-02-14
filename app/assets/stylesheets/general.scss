@@ -2,11 +2,16 @@ html {
   overflow-y: scroll;
 }
 
+html, body {
+  // background-color: red;
+  background-color: #F2F2F2;
+}
+
 .page {
   padding-top: 2em;
   padding-bottom: 3em;
   margin: auto;
-  background-color: #F2F2F2;
+  // background-color: #F2F2F2;
 }
 
 .navbar {
@@ -57,4 +62,9 @@ html {
 
 .notice {
   background-color: #ACDF87;
+}
+
+.table-col {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }

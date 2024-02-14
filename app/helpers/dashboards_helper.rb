@@ -23,6 +23,7 @@ module DashboardsHelper
     link_to 'Admin Dashboard', admin_dashboards_path, class: 'nav-link'
   end
 
+  # rubocop:disable Rails/ContentTag
   def show_card_time_period(app)
     return if app.time.blank?
 
@@ -30,4 +31,5 @@ module DashboardsHelper
       app.time_period
     end
   end
+  # rubocop:enable Rails/ContentTag
 end
