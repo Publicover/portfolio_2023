@@ -1,33 +1,41 @@
 <div class='container-fluid'>
   <div class='portrait intro'>
     <div class='row'>
-      <div class='col text-center'>
-        <%= image_tag("boys_porch.jpg", alt: "Hi there.", size: '400x400', class: 'img-fluid') %>
+      <div class='col text-end'>
+        <h1 id='intro-title'>Call me Jim.</h1>
+        <p id='hero-story'>
+          I've been a <b>Ruby on Rails</b> dev for <%= dev_time %>, and I was a writer and editor for <%= writer_time %> before that.
+          My family moved to Hamburg from the US <%= hamburg_time %> ago to enjoy a better quality of life. Here's what I've been up to.
+        </p>
+      </div>
+      <div class='col text-start'>
+        <%= image_tag("boys_porch.jpg", alt: "Hi there.", size: '500x500', class: 'img-fluid') %>
       </div>
     </div>
     
-    <div class='row'>
-      <div class='col text-center'>
-        <h1 id='intro-title'>Jim here.</h1>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='col text-center'>
-        <p id='hero-story'>
-          I've been a <b>Ruby on Rails</b> dev for <%= dev_time %>, and I was a writer and editor for <%= writer_time %>.
-          My family moved to Hamburg from the US <%= hamburg_time %> ago. Here's what I've been up to.
-        </p>
-      </div>
-    </div>
-  </div>
 
   <div class='page'>
     <div class='app-block'>
       <div class='container'>
         <div class='row'>
+          <div class='col text-center'>
+            <h3 id='programmer' class='intro-subtitle'>As a Programmer</h3>
+          </div>
+        </div>
+        <div class='row'>
           <% @apps.each do |app| %>
             <%= render 'partials/card', app: app %>
           <% end %>
+        </div>
+        <div class='row'>
+          <div class='col text-center'>
+            <h3 id='grammar' class="intro-subtitle">As a Grammar Pro</h3>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-center'>
+            <h3 id='about' class='intro-subtitle'>About</h3>
+          </div>
         </div>
       </div>
     </div>

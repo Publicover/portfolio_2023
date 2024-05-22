@@ -11,19 +11,31 @@
 }
 
 #intro-title {
-  margin-top: 3rem;
-  // margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@include media-breakpoint-down(sm) {
+  #intro-title {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  
 }
 
 #hero-story {
-  padding-left: 13rem;
-  padding-right: 13rem;
+  padding-left: 3rem;
+  // padding-right: 3rem;
 }
 @include media-breakpoint-down(lg) {
   #hero-story {
     padding-left: 0rem;
     padding-right: 0rem;
   }
+}
+
+.intro-subtitle {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .hvr-grow-shadow {
@@ -63,3 +75,4 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+

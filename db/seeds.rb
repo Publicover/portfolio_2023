@@ -281,4 +281,3 @@ App.create(
   biggest_challenge: "I needed a way to allow clients to view proposals online without the protection of having them sign into the system. I decided to send a link through email that uses a secure token generated for each proposal combined with the SGID of the client's main email address. I then create or find a user based off that client email, sign them in and allow them to view and sign the contract. This allows anyone with the link to view the proposal but allows the system to benefit from the security of pundit, devise, and plain old obfuscation.",
   tag_list: "Rails 7, stimulus, hotwire, Stripe API, minitest, postgresql, heroku, S3, Bootstrap 5, mailgun, DMARC"
 )
-
