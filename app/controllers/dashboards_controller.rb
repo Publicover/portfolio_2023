@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
 
   def index
     @apps = App.all.order(created_at: :desc)
+    @gigs = Gig.all.order(created_at: :asc)
     @clients = Client.all
   end
 

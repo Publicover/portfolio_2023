@@ -1,0 +1,51 @@
+<style type='text/css'>
+  .app-parallax {
+    background-image: url(<%= asset_path(@gig.img_url) if @gig.img_url%>);
+    opacity: 0.6;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: 15rem;
+    background-attachment: fixed;
+  }
+  @media only screen and (max-device-width: 1024px) {
+    .app-parallax {
+      background-attachment: scroll;
+      background-size: cover;
+    }
+  }
+</style>
+
+<div class='jumbotron app-parallax'></div>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col app-title text-center'>
+      <h4><%= @gig.position %></h4>
+      <p><%= @gig.client.name %>, <%= @gig.client.time_period %></p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col'>
+      <h4>Description</h4>
+      <p><%= simple_format(@gig.description) %></p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col'>
+      <h4>The biggest challenge</h4>
+      <p><%= @gig.biggest_challenge %></p>
+    </div>
+  </div>
+  <div class='row skill-block'>
+    <div class='col'>
+      <h4>Skills</h4>
+        <% if @gig.tag_list %>
+          <% @gig.tag_list.each do |t| %>
+            <%= link_to "# #{t}", tagged_path(tag: t), class: 'btn btn-sm btn-secondary mb-2 mt-2' %>
+          <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

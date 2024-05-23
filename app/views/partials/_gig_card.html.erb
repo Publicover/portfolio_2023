@@ -1,0 +1,13 @@
+<div class='col card-col'>
+  <div class='card border-dark mx-auto hvr-grow-shadow text-center'>
+    <div class='card-body d-flex flex-column text-dark'>
+      <h5 class='card-title'><%= gig.position || 'nope'%></h5>
+      <p class='card-text'><%= gig.short_description || 'nope' %></p>
+      <%= link_to 'More', gig_path(gig), class: 'btn btn-outline-secondary mt-auto' %>
+    </div>
+    <div class="card-footer text-muted">
+      <%= gig.client.name %><br>
+      <%= gig.client.time_period %>
+    </div>
+  </div>
+</div>

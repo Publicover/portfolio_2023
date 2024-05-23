@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'admin_dashboard', as: 'admin'
     end
   end
+  resources 'gigs'
   resources 'skills'
 
   get '/tagged', to: "apps#tagged", as: :tagged

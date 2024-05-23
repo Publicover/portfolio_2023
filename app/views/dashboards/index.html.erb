@@ -24,7 +24,7 @@
         </div>
         <div class='row'>
           <% @apps.each do |app| %>
-            <%= render 'partials/card', app: app %>
+            <%= render 'partials/app_card', app: app %>
           <% end %>
         </div>
         <div class='row'>
@@ -32,6 +32,12 @@
             <h3 id='grammar' class="intro-subtitle">As a Grammar Pro</h3>
           </div>
         </div>
+        <div class='row'>
+          <% @gigs.each do |gig| %>
+            <%= render 'partials/gig_card', gig: gig %>
+          <% end %>
+        </div>
+        
         <div class='row'>
           <div class='col text-center'>
             <h3 id='about' class='intro-subtitle'>About</h3>
