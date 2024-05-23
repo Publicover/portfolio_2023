@@ -281,3 +281,82 @@ App.create(
   biggest_challenge: "I needed a way to allow clients to view proposals online without the protection of having them sign into the system. I decided to send a link through email that uses a secure token generated for each proposal combined with the SGID of the client's main email address. I then create or find a user based off that client email, sign them in and allow them to view and sign the contract. This allows anyone with the link to view the proposal but allows the system to benefit from the security of pundit, devise, and plain old obfuscation.",
   tag_list: "Rails 7, stimulus, hotwire, Stripe API, minitest, postgresql, heroku, S3, Bootstrap 5, mailgun, DMARC"
 )
+
+
+
+freelance = Client.create(name: 'Unaffiliated Freelance', time_period: 'Oct 2006-August 2016')
+
+trone = Client.create(name: 'Trone Brand Energy', time_period: 'June 2012-May 2015, March 2007-Sept 2009')
+
+Gig.create(
+  client_id: trone.id,
+  position: 'Copy Editor',
+  img_url: nil,
+  description: "I had to approve every piece of outgoing material from this advertising agency, making sure it all followed the Chicago Manual of Style as well as the client's individual style guides. It was exacting work. Also, I was the agency's de facto web copy writer, so I was able to work closely with UI and UX designers to write all of the agency's client web copy, giving me a fair amount of insight into how, exactly, users go through a website.",
+  short_description: 'Edit copy, write web copy. Repeat.',
+  time_period: 'June 2012-May 2015',
+  additional_notes: nil,
+  biggest_challenge: 'The advertising industry is notoriously callous when it comes to respecting work-life balance. My team was awesome, my coworkers were great, the work was interesting, but humans were not built to regularly work 65+ hour weeks.'
+)
+
+
+incs = Client.create(name: 'Illinois Network of Charter Schools', time_period: 'Sept 2009-Sept 2011')
+
+Gig.create(
+  client_id: incs.id,
+  position: 'Communications Manager',
+  img_url: nil,
+  description: "Back in Chicago, I began working for one of the parent organizations of the AmeriCorps chapter I worked for. Here I handled all media outreach--ghostwriting editorials was my favorite--and oversaw outreach and advocacy materials.",
+  short_description: 'I handled all media. If it had words on it, it was my responsibility.',
+  time_period: 'Sept 2009-Sept 2011',
+  additional_notes: nil,
+  biggest_challenge: "I started to grow a little tired of public relations in general, though I still loved the writing and editing I got to do."
+)
+
+Gig.create(
+  client_id: trone.id,
+  position: 'Social Media Manager',
+  img_url: nil,
+  description: "Here I was ghostwriting and editing material for our client's mom bloggers. I was also handling PR for the client's other initiatives, mainly a soccer ball giveaway for tire dealers who sponsored local youth soccer teams.",
+  short_description: 'I wrote mom blogs for quite a long time. Tight turnarounds, strictly deadline-driven.',
+  time_period: 'March 2007-Sept 2009',
+  additional_notes: nil,
+  biggest_challenge: "This was my introduction to public relations. Now I was using other people's databases of press contacts, discovering what, exactly, the importance of optimized queries can do for a user."
+)
+
+amer = Client.create(name: 'AmeriCorps Project YES', time_period: 'Sept 2005-Sept 2006')
+
+Gig.create(
+  client_id: amer.id,
+  position: 'Teacher',
+  img_url: nil,
+  description: "AmeriCorps is like a domestic Peace Corps focused around troubled school systems. I was attached to the Vittum Theater, a children's theater in Chicago's Old Town neighborhood. Here I taught two poetry classes to high school students and two arts integrations classes as well as helped build settings for various productions. I also lead my team in two major projects: bringing order to the parent organization's children's library as well as a database of the theater's props and costumes. This was my first introduction to proper databases since both used Microsoft Access.",
+  short_description: 'I taught poetry and theater while organizing two major database projects.',
+  time_period: 'Sept 2005-Oct 2006',
+  additional_notes: nil,
+  biggest_challenge: "At the beginning of the projects, I absolutely said at some point that I wasn't sure why we couldn't just use Excel for these databases. By the end of both projects, after organizing the entry of more than 20,000 items between the two, I sincerely apologized to everyone about that Excel thing I said a while ago."
+)
+
+lecg = Client.create(name: 'LECG', time_period: 'Oct 2004-Sept 2005')
+
+Gig.create(
+  client_id: lecg.id,
+  position: 'Case Manager',
+  img_url: nil,
+  description: 'At LECG, I was in charge of handling all expert testimony before trial. This included editing for grammar, rewriting confusing parts, doing content edits (a more abstract version of fact checking) and keeping things organized. And by organized, I mean organized--if I was told I needed to find document GNV2077 parts K through M, I had about five minutes to find it in our room holding several thousand binders.',
+  short_description: 'Here I owned outgoing legal expert testimony as well as the case library',
+  time_period: nil,
+  additional_notes: ,
+  biggest_challenge: "Quick retrieval of legal documents became the most important part of my job despite it taking up less than 5% of my time. I didn't know it at the time, but this was an amazing introduction to broader database concepts, particularly indexing. My system was somewhat naive (me being a recent college grad at the time), but it was clear enough that someone else could take over when I left."
+)
+
+Gig.create(
+  client_id: freelance.id,
+  position: 'Freelancer',
+  img_url: nil,
+  description: "Even when I had full-time jobs, I was still writing and editing on the side. Gaps in my resume between affiliated work were covered with freelancing. This is where I discovered I love diverse, distributed teams and ",
+  short_description: 'I wanted to write all the things as quickly as clients needed them. ',
+  time_period: 'Oct 2006-Aug 2016',
+  additional_notes: nil,
+  biggest_challenge: "Making clients pay you on time is literally impossible, and it's one of the reasons I keep leaving freelance work in general."
+)

@@ -8,5 +8,6 @@ class ClientTest < ActiveSupport::TestCase
 
   test 'should know children' do 
     assert clients(:one).apps.include?(apps(:one))
+    assert clients(:one).gigs.include?(gigs(:one))
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_18_145529) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_22_102112) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_145529) do
     t.string "time_period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "gigs", force: :cascade do |t|
+    t.string "position"
+    t.string "img_url"
+    t.text "description"
+    t.string "short_description"
+    t.string "time_period"
+    t.text "additional_notes"
+    t.text "biggest_challenge"
+    t.bigint "client_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_gigs_on_client_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -86,5 +100,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_145529) do
   end
 
   add_foreign_key "apps", "clients"
+  add_foreign_key "gigs", "clients"
   add_foreign_key "taggings", "tags"
 end

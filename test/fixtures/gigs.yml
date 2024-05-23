@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: Copy Editor
+  img_url: nil
+  description: Words words words
+  short_description: words
+  time_period: then to thence
+  additional_notes: nil
+  biggest_challenge: hard
+  client: one
+
+two:
+  position: Freelancer
+  img_url: nil
+  description: I wrote so much, you guys
+  short_description: writing
+  time_period: basically always
+  additional_notes: nil
+  biggest_challenge: Pay on time, people!
+  client: two
